@@ -1,0 +1,76 @@
+{
+  "ngos": [
+    {
+      "id": 1,
+      "name": "Global Disaster Relief Foundation",
+      "description": "International disaster response and emergency management organization",
+      "latitude": 28.6139,
+      "longitude": 77.2090,
+      "contact_email": "emergency@gdrf.org",
+      "contact_phone": "+91-11-XXXX-XXXX",
+      "specialization": "Search & Rescue, Medical Aid",
+      "service_radius_km": 100,
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "Indian Red Cross Society",
+      "description": "Disaster relief, medical assistance, and rehabilitation support",
+      "latitude": 28.5244,
+      "longitude": 77.1855,
+      "contact_email": "disaster@redcrossindia.org",
+      "contact_phone": "+91-11-XXXX-XXXX",
+      "specialization": "Medical Aid, Food Relief, Shelter",
+      "service_radius_km": 80,
+      "active": true
+    },
+    {
+      "id": 3,
+      "name": "Disaster Management Authority",
+      "description": "Government agency for disaster preparedness and response",
+      "latitude": 30.2672,
+      "longitude": 78.3189,
+      "contact_email": "response@ndma.gov.in",
+      "contact_phone": "+91-XXXX-XXXX-XXXX",
+      "specialization": "Search & Rescue, Coordination, Medical",
+      "service_radius_km": 150,
+      "active": true
+    },
+    {
+      "id": 4,
+      "name": "NGO for Community Support",
+      "description": "Local community support and rehabilitation after disasters",
+      "latitude": 23.0225,
+      "longitude": 72.5714,
+      "contact_email": "support@ngocommunity.org",
+      "contact_phone": "+91-XXXX-XXXX-XXXX",
+      "specialization": "Food Relief, Shelter, Rehabilitation",
+      "service_radius_km": 60,
+      "active": true
+    },
+    {
+      "id": 5,
+      "name": "Medical Emergency Response Unit",
+      "description": "Specialized medical team for emergency disaster response",
+      "latitude": 19.0760,
+      "longitude": 72.8777,
+      "contact_email": "medical@merunit.org",
+      "contact_phone": "+91-XXXX-XXXX-XXXX",
+      "specialization": "Medical Aid, Trauma Care",
+      "service_radius_km": 75,
+      "active": true
+    },
+    {
+      "id": 6,
+      "name": "Water & Sanitation Rescue",
+      "description": "Provides water, sanitation, and hygiene services in disaster zones",
+      "latitude": 22.5726,
+      "longitude": 88.3639,
+      "contact_email": "wash@waterrescue.org",
+      "contact_phone": "+91-XXXX-XXXX-XXXX",
+      "specialization": "Water & Sanitation, Health Support",
+      "service_radius_km": 70,
+      "active": true
+    }
+  ]
+}
