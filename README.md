@@ -1,9 +1,8 @@
 <div align="center">
 
-<img src="https://img.shields.io/badge/AapdaVision-AI-00C9A7?style=for-the-badge&labelColor=0D1117" alt="AapdaVision"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=00C9A7&height=200&section=header&text=AapdaVision%20AI&fontSize=50&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Transparent%20Damage%20Analytics%20for%20India&descAlignY=55&descSize=18" width="100%"/>
 
-# 🛰️ AapdaVision AI
-### Transparent Damage Analytics for India
+<br/>
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
@@ -21,9 +20,18 @@
 
 <br/>
 
-[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-00C9A7?style=for-the-badge)](https://your-demo-link.vercel.app)
-&nbsp;
-[🎯 Features](#-features) &nbsp;•&nbsp; [🏗️ Architecture](#%EF%B8%8F-architecture) &nbsp;•&nbsp; [⚙️ Getting Started](#%EF%B8%8F-getting-started) &nbsp;•&nbsp; [📡 API](#-api-reference)
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-00C9A7?style=for-the-badge&logoColor=white)](https://your-demo-link.vercel.app)
+[![Stars](https://img.shields.io/github/stars/deepraj-07/aapda-vision-ai?style=for-the-badge&color=00C9A7)](https://github.com/deepraj-07/aapda-vision-ai/stargazers)
+[![Issues](https://img.shields.io/github/issues/deepraj-07/aapda-vision-ai?style=for-the-badge&color=EE4C2C)](https://github.com/deepraj-07/aapda-vision-ai/issues)
+[![License](https://img.shields.io/github/license/deepraj-07/aapda-vision-ai?style=for-the-badge&color=4169E1)](LICENSE)
+
+<br/>
+
+[🎯 Features](#-features) &nbsp;•&nbsp; [🏗️ Architecture](#%EF%B8%8F-architecture) &nbsp;•&nbsp; [⚙️ Getting Started](#%EF%B8%8F-getting-started) &nbsp;•&nbsp; [📡 API](#-api-reference) &nbsp;•&nbsp; [📸 Screenshots](#-screenshots)
+
+<br/>
+
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=deepraj-07.aapda-vision-ai&left_color=00C9A7&right_color=0D1117)
 
 </div>
 
