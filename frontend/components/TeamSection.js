@@ -7,14 +7,6 @@ const teamMembers = [
     linkedIn: "https://www.linkedin.com",
     email: "mailto:deep@example.com",
   },
-  {
-    name: "Ayush Shrivastava",
-    role: "Chief ML Engineer",
-    initials: "AS",
-    image: "/team/ayush.jpeg",
-    linkedIn: "https://www.linkedin.com",
-    email: "mailto:ayush@example.com",
-  },
 ];
 
 function IconLinkedIn() {
@@ -37,11 +29,11 @@ export default function TeamSection() {
   return (
     <section className="space-y-6">
       <div className="text-center">
-        <p className="text-xs uppercase tracking-[0.3em] text-cyanline/80">Core Contributors</p>
-        <h3 className="font-display text-4xl text-white">Meet The Team</h3>
+        <p className="text-xs uppercase tracking-[0.3em] text-cyanline/80">Contributor</p>
+        <h3 className="font-display text-4xl text-white">Contributor</h3>
       </div>
 
-      <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
+      <div className="mx-auto flex max-w-4xl gap-6 justify-center flex-wrap">
         {teamMembers.map((member) => (
           <article
             key={member.name}

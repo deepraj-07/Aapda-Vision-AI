@@ -1,199 +1,369 @@
-# AapdaVision AI
+<div align="center">
 
-Production-ready scaffold for an AI disaster damage assessment platform.
+<img src="https://img.shields.io/badge/AapdaVision-AI-00C9A7?style=for-the-badge&labelColor=0D1117" alt="AapdaVision"/>
 
-## Final Tech Stack
+# 🛰️ AapdaVision AI
+### Transparent Damage Analytics for India
 
-- AI/ML: PyTorch, OpenCV, YOLOv8, segmentation_models_pytorch
-- Backend: Flask REST API
-- Frontend: Next.js + Tailwind CSS
-- Database: PostgreSQL (with SQLite fallback)
-- Visualization: Chart.js + Mapbox
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 
-## System Architecture
+<br/>
 
-User -> Frontend (Next.js Dashboard) -> Flask Backend API -> AI Inference Engine -> YOLO Building Detection -> Damage Segmentation Model -> PostgreSQL -> Analytics Dashboard
+> **See the Damage. Save Lives Faster.**
+>
+> AapdaVision AI turns satellite and drone imagery into actionable disaster intelligence —
+> with building detection, damage segmentation, and on-map risk insights.
 
-## Project Structure
+<br/>
 
-```text
-aapda-vision-ai
-├── backend
-│   ├── app.py
-│   ├── routes
-│   │   └── analyze.py
-│   ├── services
-│   │   ├── yolo_service.py
-│   │   ├── segmentation_service.py
-│   │   └── heatmap_service.py
-│   ├── models
-│   │   └── damage_model.py
-│   └── utils
-│       └── image_utils.py
-├── ai-training
-│   ├── train.py
-│   ├── dataset.py
-│   └── model.py
-├── frontend
-│   ├── pages
-│   ├── components
-│   └── styles
-├── data
-└── requirements.txt
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-00C9A7?style=for-the-badge)](https://your-demo-link.vercel.app)
+&nbsp;
+[🎯 Features](#-features) &nbsp;•&nbsp; [🏗️ Architecture](#%EF%B8%8F-architecture) &nbsp;•&nbsp; [⚙️ Getting Started](#%EF%B8%8F-getting-started) &nbsp;•&nbsp; [📡 API](#-api-reference)
+
+</div>
+
+---
+
+## 📸 Screenshots
+
+<div align="center">
+
+### 🏠 Dashboard — Disaster Intelligence Platform
+<img src="docs/screenshots/dashboard.png" width="100%" alt="AapdaVision Dashboard"/>
+
+<br/>
+
+### 📤 Image Upload · Location Map · Operational Response
+<img src="docs/screenshots/img-upload.png" width="100%" alt="Image Upload and Map"/>
+
+<br/>
+
+### 🔍 Analysis Output — YOLOv8 Building Detection
+<img src="docs/screenshots/analysis-output.png" width="100%" alt="Before and After Analysis"/>
+
+<br/>
+
+### 📊 AI Insights — Damage Stats & Field Recommendations
+<img src="docs/screenshots/ai-insights.png" width="100%" alt="AI Insights Dashboard"/>
+
+<br/>
+
+### 🏥 Nearby NGOs & Relief Centers
+<img src="docs/screenshots/nearby-ngos.png" width="100%" alt="Nearby NGOs"/>
+
+<br/>
+
+### 📡 Live Disaster Timeline & Urgent Campaigns
+<table width="100%">
+  <tr>
+    <td width="50%"><img src="docs/screenshots/disaster-timeline.png" width="100%" alt="Disaster Timeline"/></td>
+    <td width="50%"><img src="docs/screenshots/urgent-campaigns.png" width="100%" alt="Urgent Campaigns"/></td>
+  </tr>
+</table>
+
+</div>
+
+---
+
+## 🎯 Problem Statement
+
+During disasters, rapid damage assessment is critical — yet traditional methods are:
+
+- ❌ **Slow** — ground surveys take days or weeks
+- ❌ **Dangerous** — putting responders at risk in unstable zones
+- ❌ **Inconsistent** — manual scoring varies across assessors
+- ❌ **Unscalable** — can't cover large affected areas quickly
+
+---
+
+## 🚀 Solution
+
+**AapdaVision AI** automates satellite/drone imagery analysis end-to-end:
+
+- ✅ YOLOv8 building detection with bounding boxes
+- ✅ U-Net damage segmentation per building
+- ✅ Risk scoring: `Low` · `Moderate` · `High` · `Critical`
+- ✅ Actionable field recommendations auto-generated
+- ✅ Nearby NGO & relief center locator
+- ✅ Live disaster intelligence dashboard
+- ✅ Transparent relief campaigns with funding tracker
+
+---
+
+## ✨ Features
+
+### 🛰️ Image Upload & Analysis
+- Accepts satellite or drone images via drag-and-drop
+- YOLOv8 object detection draws bounding boxes per building
+- U-Net + ResNet backbone segments damage masks with **89%+ model confidence**
+
+### 📊 AI Insights Dashboard
+- Outputs: `total_buildings`, `damaged_buildings`, `damage_%`, `damage_class`, `model_confidence`
+- Actionable recommendations: ambulances required, rescue teams, evacuation status
+- Advanced ML Insights: urgency level, avg building risk, recommended teams
+
+### 🗺️ Interactive Map & Location
+- Leaflet map with clickable coordinates
+- Disaster Safety Insights by zone (Flood, Earthquake, Fire/Landslide)
+- Operational Response Panel with Response Priority Index
+
+### 🏥 Nearby NGO Finder
+- Auto-fetches relief centers by city/state
+- Shows contact info, coordinates, and service type (Medical Aid / Search & Rescue / Food Relief)
+
+### 📡 Live Disaster Intelligence
+- Aggregate stats across all analyses: total events, high-risk alerts, avg damage %
+- Disaster Timeline with per-location logs
+- Active Campaign Signals for NGO coordination
+
+### 💰 Relief Campaigns
+- Gov-verified campaigns with funding progress
+- Contribute Relief flow for donors
+
+---
+
+## 🏗️ Architecture
+
+```
+User (Browser)
+     │
+     ▼
+Next.js Frontend  ──────────────────────────────────────┐
+(Upload / Dashboard / Campaigns / Risk AI)              │
+     │                                                  │
+     ▼                                                  ▼
+Flask REST API (app.py)                        PostgreSQL DB
+     │                                       (analyses, campaigns,
+     ├──► YOLOv8 Service      → Building detection        NGO data)
+     ├──► U-Net Segmentation  → Damage mask per building
+     ├──► ML Pipeline         → Scoring, risk classification
+     ├──► Heatmap Service     → Visual overlays
+     ├──► NGO Service         → Nearby relief centers
+     └──► SHAP Explainer      → Feature attribution
 ```
 
-## API Endpoints
+**End-to-End Flow:**
+```
+Upload Image → YOLO Detection → U-Net Segmentation
+    → Damage Scoring → Heatmap → DB Persist
+        → Dashboard · Recommendations · NGO Locator · Report
+```
 
-- `POST /upload-image`: Accepts image form-data field `image`.
-- `POST /analyze`: Runs YOLO detection + segmentation + heatmap + DB save.
-- `POST /analyze-damage`: Alias of analyze endpoint.
-- `GET /report`: Returns recent analysis results.
-- `GET /report?analysis_id=<id>`: Returns one report.
+---
 
-## Phase Plan
+## 🛠️ Tech Stack
 
-1. Environment setup and dependency installation
-2. YOLO building detection integration
-3. U-Net segmentation model pipeline
-4. Heatmap overlay generation
-5. Flask API integration with PostgreSQL
-6. Next.js dashboard for upload, analytics, map, and report views
+| Layer | Technology |
+|---|---|
+| Backend | Python 3, Flask, Flask-CORS, Flask-SQLAlchemy |
+| AI / Detection | PyTorch, YOLOv8 (Ultralytics) |
+| AI / Segmentation | segmentation_models_pytorch (U-Net + ResNet) |
+| Explainability | SHAP, matplotlib, seaborn |
+| Image Processing | OpenCV, Pillow |
+| Frontend | Next.js, React, Tailwind CSS |
+| Maps | Leaflet, OpenStreetMap |
+| Charts | Chart.js |
+| Database | PostgreSQL (psycopg2), SQLite fallback |
 
-## Local Setup
+---
 
-### 1) Backend
+## ⚙️ Getting Started
+
+### Prerequisites
+- Python 3.9+
+- Node.js 18+
+- PostgreSQL (or SQLite for local dev)
+
+### Backend
 
 ```bash
-cd backend
+git clone https://github.com/deepraj-07/aapda-vision-ai.git
+cd aapda-vision-ai
+
 python -m venv .venv
-.venv\Scripts\activate
-pip install -r ..\requirements.txt
-copy .env.example .env
-python app.py
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
+
+pip install -r requirements.txt
+
+cp .env.example .env             # Fill in your values
+python backend/app.py
 ```
 
-### 2) Frontend
+### Frontend
 
 ```bash
 cd frontend
 npm install
-copy .env.example .env.local
 npm run dev
 ```
 
-Backend default URL: `http://localhost:5000`  
-Frontend default URL: `http://localhost:3000`
+Open [http://localhost:3000](http://localhost:3000) to view the dashboard.
 
-## Production Prompt Pack
+---
 
-### Master Prompt
+## 🔐 Environment Variables
 
-You are helping build a production-level AI disaster damage assessment platform.
+```env
+FLASK_APP=backend.app
+FLASK_ENV=development
+DATABASE_URL=postgresql://user:password@localhost:5432/aapda_vision
+SECRET_KEY=your_secret_key_here
+MODEL_PATH=instance/best.pt
+YOLO_MODEL_PATH=backend/yolov8n.pt
+DAMAGE_MODEL_PATH=backend/models/damage_classifier_best.pth
+FRONTEND_URL=http://localhost:3000
+```
 
-The system analyzes satellite or drone images and detects building damage after disasters.
+> ⚠️ Never commit `.env` to Git. Use `.env.example` for safe defaults.
 
-Tech stack:
+---
 
-Backend:
-Flask REST API
-Python
+## 📡 API Reference
 
-AI Models:
-YOLOv8 for building detection
-U-Net with ResNet encoder for damage segmentation
-PyTorch
+### `POST /upload-image`
+Upload a satellite or drone image.
 
-Image Processing:
-OpenCV
+**Request:** `multipart/form-data` — field: `image` (PNG/JPG)
 
-Frontend:
-Next.js
-React
-Tailwind CSS
+**Response:**
+```json
+{ "analysis_id": "abc123", "message": "Image received. Analysis started." }
+```
 
-Database:
-PostgreSQL
+### `POST /analyze`
+Runs YOLO detection + U-Net segmentation, returns full damage report.
 
-System flow:
+**Request:** `{ "analysis_id": "abc123" }`
 
-1 User uploads satellite image
-2 Backend preprocesses image
-3 YOLO model detects buildings
-4 Segmentation model predicts damage mask
-5 System calculates damage percentage
-6 Heatmap visualization generated
-7 Results stored in database
-8 Dashboard displays analytics
+**Response:**
+```json
+{
+  "analysis_id": "abc123",
+  "total_buildings": 35,
+  "damaged_buildings": 34,
+  "damage_percentage": 97.14,
+  "damage_class": "Destroyed",
+  "risk_level": "HIGH",
+  "model_confidence": 0.892,
+  "annotated_image_url": "/outputs/abc123_annotated.jpg",
+  "heatmap_url": "/outputs/abc123_heatmap.jpg"
+}
+```
 
-Build a modular Python backend architecture including:
+### `GET /report`
+- No params → list of all analyses
+- `?analysis_id=abc123` → single result
 
-Flask app
-image upload API
-AI inference service
-heatmap generation
-database integration
+---
 
-Code should be clean, modular, production-ready, and structured using service layers.
+## 📁 Project Structure
 
-### YOLO Prompt
+```
+aapda-vision-ai/
+├── .github/workflows/
+├── backend/
+│   ├── app.py
+│   ├── inference.py
+│   ├── analyze.py
+│   ├── damage_model.py
+│   ├── image_utils.py
+│   ├── models/
+│   │   ├── best.pt
+│   │   ├── yolov8n.pt
+│   │   └── damage_classifier_best.pth
+│   └── services/
+│       ├── yolo_service.py
+│       ├── segmentation_service.py
+│       ├── heatmap_service.py
+│       ├── ml_pipeline.py
+│       └── ngo_service.py
+├── frontend/
+│   ├── pages/
+│   ├── components/
+│   └── styles/
+├── ai-training/
+│   ├── dataset.py
+│   ├── model.py
+│   └── train.py
+├── docs/
+│   └── screenshots/
+├── data/
+├── requirements.txt
+├── package.json
+└── .env.example
+```
 
-Create a Python module using YOLOv8 to detect buildings in satellite images.
+---
 
-Requirements:
+## 🤖 Model Weights
 
-Load pretrained YOLO model
-Accept image input
-Return bounding boxes
-Return building count
-Save detection image with bounding boxes
+> ⚠️ Do NOT commit `.pt` / `.pth` files to Git. Use [Git LFS](https://git-lfs.github.com/) or store on S3/GDrive.
 
-Use OpenCV for image reading and visualization.
+| File | Purpose |
+|---|---|
+| `yolov8n.pt` | YOLOv8 nano — building detection |
+| `best.pt` | Fine-tuned YOLO — domain-specific |
+| `damage_classifier_best.pth` | U-Net/ResNet — damage segmentation |
 
-### Segmentation Prompt
+### Retraining
 
-Create a PyTorch implementation of a U-Net segmentation model using segmentation_models_pytorch.
+```bash
+cd ai-training
+python dataset.py --data_dir data/raw --output_dir data/processed
+python train.py --epochs 50 --batch_size 16 --model_save_path ../instance/best.pt
+```
 
-The model should classify satellite image pixels into 4 damage classes:
+---
 
-0 no damage
-1 minor damage
-2 major damage
-3 destroyed
+## 🗄️ Database Setup
 
-Include training pipeline and inference function.
+```bash
+psql -U postgres -c "CREATE DATABASE aapda_vision;"
+# SQLAlchemy auto-creates tables on first run
+# Falls back to instance/app.db (SQLite) if DATABASE_URL is not set
+```
 
-### Flask Prompt
+---
 
-Create a Flask backend for an AI disaster detection platform.
+## ⚠️ Ethics & Limitations
 
-Endpoints required:
+- Not validated for all geographic regions or building types
+- Low-resolution or cloudy imagery may reduce accuracy
+- **Must not be used as the sole basis for life-critical decisions** — always verify with ground truth
 
-POST /upload-image
-Accept satellite image file
+---
 
-POST /analyze
-Run building detection and damage segmentation
+## 📌 Roadmap
 
-GET /report
-Return JSON with:
+- [ ] User authentication & role-based access (Responder / Analyst / Admin)
+- [ ] Mobile PWA for field teams
+- [ ] Multi-zone batch analysis
+- [ ] Auto-generated PDF damage reports
+- [ ] GeoJSON export for GIS tools
+- [ ] Real-time WebSocket inference updates
 
-total buildings
-damaged buildings
-damage percentage
-risk level
+---
 
-Use modular architecture with services folder.
+## 🙏 Acknowledgements
 
-### Frontend Prompt
+- [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics)
+- [segmentation_models_pytorch](https://github.com/qubvel/segmentation_models.pytorch)
+- [SHAP](https://github.com/slundberg/shap)
+- [Leaflet](https://leafletjs.com/) & [OpenStreetMap](https://www.openstreetmap.org/)
 
-Create a Next.js dashboard UI for an AI disaster damage assessment system.
+---
 
-Features:
+<div align="center">
 
-image upload
-damage heatmap display
-damage statistics cards
-interactive map visualization
-downloadable report
+**Built solo with ❤️ for faster disaster response**
 
-Use Tailwind CSS and make the UI feel like a premium modern disaster-response intelligence dashboard.
+[![GitHub](https://img.shields.io/badge/Deep_Raj-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/deepraj-07)
+
+*AapdaVision AI — Disaster Intelligence Platform*
+
+</div>
